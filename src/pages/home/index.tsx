@@ -1,11 +1,12 @@
 import { Suspense } from 'react';
 
+import Spinner from '../../components/Spinner';
 import CharacterList from './components/CharacterList';
 
 const Home = () => {
   return (
     <>
-      <Suspense fallback={<h1>Loading</h1>}>
+      <Suspense fallback={<Spinner size={40} color="white" />}>
         <CharacterList />
       </Suspense>
     </>
