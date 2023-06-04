@@ -3,7 +3,7 @@ export interface Character {
   films: Array<string>;
   name: string;
   imageUrl: string;
-  souceUrl: string;
+  sourceUrl: string;
 }
 
 export type CharacterList = Array<Pick<Character, 'id' | 'name' | 'imageUrl'>>;
