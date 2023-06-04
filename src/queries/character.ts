@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { fetchCharacterList, fetchCharaterDetailData } from '../api/charater';
+import { fetchCharacterDetailData, fetchCharacterList } from '../api/character';
 import { Character, CharacterList } from '../types/character';
 
 export const useQueryCharacterList = () =>
-  useQuery<CharacterList>(['charaterList'], fetchCharacterList, { suspense: true });
+  useQuery<CharacterList>(['characterList'], fetchCharacterList, { suspense: true });
 
 export const useQueryCharacterDetail = <T>(id: T) =>
-  useQuery<Character>(['character', id], () => fetchCharaterDetailData<T>(id), { suspense: true });
+  useQuery<Character>(['character', id], () => fetchCharacterDetailData<T>(id), { suspense: true });
