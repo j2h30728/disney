@@ -1,10 +1,11 @@
-import { Outlet, useMatch } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Header from './components/Header';
 
 function App() {
-  const isRootePath = Boolean(useMatch('/'));
+  const { pathname } = useLocation();
+  const isRootePath = pathname === '/';
 
   return (
     <Connainer>

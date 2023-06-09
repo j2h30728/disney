@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const Header = ({ isRootePath }: { isRootePath: boolean }) => {
   const navigate = useNavigate();
-  const handleGoBack = () => navigate(-1);
+  const handleCLickBackButton = () => navigate(-1);
   return (
     <RootPathwrapeer>
-      {isRootePath ? null : <BackButton onClick={handleGoBack}>&lt;</BackButton>}
+      {isRootePath ? null : <BackButton onClick={handleCLickBackButton}>&lt;</BackButton>}
       <Title to="/">Disney Characters</Title>
     </RootPathwrapeer>
   );
