@@ -5,11 +5,11 @@ import Header from './components/Header';
 
 function App() {
   const { pathname } = useLocation();
-  const isRootePath = pathname === '/';
+  const isRootPath = pathname === '/';
 
   return (
     <Connainer>
-      <Header isRootePath={isRootePath} />
+      <Header isRootPath={isRootPath} />
       <Outlet />
     </Connainer>
   );
