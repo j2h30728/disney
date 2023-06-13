@@ -7,13 +7,11 @@ import CharacterDetailData from './components/CharacterDetailData';
 
 const CharacterDetail = () => {
   return (
-    <>
-      <ErrorBoundary FallbackComponent={FallbackErrorBoundary}>
-        <Suspense fallback={<Spinner size={40} color="white" />}>
-          <CharacterDetailData />
-        </Suspense>
-      </ErrorBoundary>
-    </>
+    <ErrorBoundary FallbackComponent={FallbackErrorBoundary}>
+      <Suspense fallback={<Spinner size={40} color="white" />}>
+        <CharacterDetailData />
+      </Suspense>
+    </ErrorBoundary>
   );
 };
 
