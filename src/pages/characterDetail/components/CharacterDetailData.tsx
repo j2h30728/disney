@@ -8,7 +8,7 @@ import { Character } from '../../../types/character';
 const CharacterDetailData = () => {
   const { state } = useLocation() as { state: Character };
   const { id } = useParams() as { id: string };
-  const { data } = useQueryCharacterDetail<string>(id);
+  const { data } = useQueryCharacterDetail(id);
 
   return (
     <CharacterDetailContainer>
