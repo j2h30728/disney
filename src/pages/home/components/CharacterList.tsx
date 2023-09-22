@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Image from '../../../components/Image';
+import { Image } from '../../../components';
 import { useQueryCharacterList } from '../../../queries/character';
 
 const CharacterList = () => {

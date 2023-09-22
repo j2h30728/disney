@@ -1,8 +1,6 @@
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-
-import FallbackErrorBoundary from '../../components/FallbackErrorBoundary';
-import Spinner from '../../components/Spinner';
+import { FallbackErrorBoundary, Spinner } from '../../components';
 import CharacterDetailData from './components/CharacterDetailData';
 
 const CharacterDetail = () => {

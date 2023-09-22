@@ -11,28 +11,28 @@ const FallbackErrorBoundary = ({ error, resetErrorBoundary }: ErrorBoundaryProps
   };
 
   return (
-    <ErrorBoundaryConteiner>
-      <NotieceMessage>오류가 발생했습니다!</NotieceMessage>
-      <ErrorMeassage>{error.message}</ErrorMeassage>
-      <RetryButton onClick={handleRetry}>새로고침</RetryButton>
-    </ErrorBoundaryConteiner>
+    <ErrorBoundaryContainer>
+      <NoticeMessage>오류가 발생했습니다!</NoticeMessage>
+      <ErrorMessage>{error.message}</ErrorMessage>
+      <RetryButton onClick={handleRetry}>다시 시도하기</RetryButton>
+    </ErrorBoundaryContainer>
   );
 };
 
 export default FallbackErrorBoundary;
 
-const ErrorBoundaryConteiner = styled.div`
+const ErrorBoundaryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 `;
 
-const NotieceMessage = styled.h2`
+const NoticeMessage = styled.h2`
   color: white;
   font-size: 30px;
 `;
-const ErrorMeassage = styled.pre`
+const ErrorMessage = styled.pre`
   color: red;
 `;
 

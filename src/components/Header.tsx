@@ -5,15 +5,15 @@ const Header = ({ isRootPath }: { isRootPath: boolean }) => {
   const navigate = useNavigate();
   const handleCLickBackButton = () => navigate(-1);
   return (
-    <RootPathwrapeer>
+    <RootPathWrapper>
       {isRootPath ? null : <BackButton onClick={handleCLickBackButton}>&lt;</BackButton>}
       <Title to="/">Disney Characters</Title>
-    </RootPathwrapeer>
+    </RootPathWrapper>
   );
 };
 export default Header;
 
-const RootPathwrapeer = styled.div`
+const RootPathWrapper = styled.div`
   margin: 40px 0;
   width: 100%;
   display: flex;

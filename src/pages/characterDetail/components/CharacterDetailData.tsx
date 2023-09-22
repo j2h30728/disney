@@ -1,9 +1,9 @@
 import { useLocation, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Image from '../../../components/Image';
+import { Image } from '../../../components';
 import { useQueryCharacterDetail } from '../../../queries/character';
-import { Character } from '../../../types/character';
+import { Character } from '../../../types';
 
 const CharacterDetailData = () => {
   const { state } = useLocation() as { state: Character };

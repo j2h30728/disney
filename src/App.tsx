@@ -1,23 +1,23 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Header from './components/Header';
+import { Header } from './components';
 
 function App() {
   const { pathname } = useLocation();
   const isRootPath = pathname === '/';
 
   return (
-    <Connainer>
+    <Container>
       <Header isRootPath={isRootPath} />
       <Outlet />
-    </Connainer>
+    </Container>
   );
 }
 
 export default App;
 
-const Connainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
