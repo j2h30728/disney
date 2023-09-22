@@ -1,13 +1,15 @@
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
+import ROUTE_PATH from '../router/routerPath';
+
 const Header = ({ isRootPath }: { isRootPath: boolean }) => {
   const navigate = useNavigate();
   const handleCLickBackButton = () => navigate(-1);
   return (
     <RootPathWrapper>
       {isRootPath ? null : <BackButton onClick={handleCLickBackButton}>&lt;</BackButton>}
-      <Title to="/">Disney Characters</Title>
+      <Title to={ROUTE_PATH.HOME}>Disney Characters</Title>
     </RootPathWrapper>
   );
 };

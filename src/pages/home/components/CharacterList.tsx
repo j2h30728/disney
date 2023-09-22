@@ -10,7 +10,7 @@ const CharacterList = () => {
   return (
     <CharacterListContainer>
       {data?.slice(0, 198).map(character => (
-        <CharacterItem key={character.id} to={`character/${character.id}`} state={character}>
+        <CharacterItem key={character.id} to={`character/${character.id}`}>
           <Image imageUrl={character?.imageUrl} />
           <CharacterName>{character.name}</CharacterName>
         </CharacterItem>

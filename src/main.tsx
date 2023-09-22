@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 
 import GlobalStyle from './GlobalStyle.tsx';
-import router from './router.tsx';
+import router from './router/index.tsx';
 import queryClient from './utils/queryConfig.ts';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

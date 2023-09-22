@@ -6,13 +6,11 @@ import CharacterList from './components/CharacterList';
 
 const Home = () => {
   return (
-    <>
-      <ErrorBoundary FallbackComponent={FallbackErrorBoundary}>
-        <Suspense fallback={<Spinner size={40} color="white" />}>
-          <CharacterList />
-        </Suspense>
-      </ErrorBoundary>
-    </>
+    <ErrorBoundary FallbackComponent={FallbackErrorBoundary}>
+      <Suspense fallback={<Spinner size={40} color="white" />}>
+        <CharacterList />
+      </Suspense>
+    </ErrorBoundary>
   );
 };
 

@@ -2,10 +2,11 @@ import { Outlet, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Header } from './components';
+import ROUTE_PATH from './router/routerPath';
 
 function App() {
   const { pathname } = useLocation();
-  const isRootPath = pathname === '/';
+  const isRootPath = pathname === ROUTE_PATH.ROOT;
 
   return (
     <Container>
