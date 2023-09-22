@@ -6,9 +6,8 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:import/recommended',
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  plugins: ['react-refresh', 'simple-import-sort'],
+  plugins: ['react-refresh', 'simple-import-sort', 'import'],
   rules: {
     'react-refresh/only-export-components': 'warn',
     'simple-import-sort/imports': 'error',
@@ -17,8 +16,19 @@ module.exports = {
     'no-unused-vars': 'error',
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
       node: {
+        paths: ['src'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        alias: {
+          '@': './src',
+        },
+      },
+      typescript: {
+        alwaysTryTypes: true,
         paths: ['src'],
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
       },
