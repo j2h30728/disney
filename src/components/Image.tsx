@@ -1,28 +1,23 @@
-import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
-interface ImageProps {
-  imageUrl: string | undefined;
-  children?: React.ReactNode;
-}
+const defaultImage = new URL('/defaultImage.png', import.meta.url).href;
 
-const Image = ({ imageUrl, children }: PropsWithChildren<ImageProps>) => {
-  return <BaseImage imageUrl={imageUrl}>{children}</BaseImage>;
+const Image = ({ imageUrl, alt }: { imageUrl: string | undefined; alt: string | undefined }) => {
+  return <BaseImage alt={alt} src={imageUrl ? imageUrl : defaultImage} />;
 };
 
-Image.DetailCharacter = ({ imageUrl, children }: PropsWithChildren<ImageProps>) => {
-  return <DetailCharacterImage imageUrl={imageUrl}>{children}</DetailCharacterImage>;
+Image.DetailCharacter = ({ imageUrl, alt }: { imageUrl: string | undefined; alt: string | undefined }) => {
+  return <DetailCharacterImage alt={alt} src={imageUrl ? imageUrl : defaultImage} />;
 };
 
 export default Image;
 
-const BaseImage = styled.div<{ imageUrl: string | undefined }>`
+const BaseImage = styled.img`
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-image: url(${props => props.imageUrl});
-  background-size: cover;
-  background-position: center center;
+  object-fit: cover;
+  object-position: center top;
 `;
 
 const DetailCharacterImage = styled(BaseImage)`

@@ -7,7 +7,6 @@ import { useQueryCharacterDetail } from '@/queries/character';
 const CharacterDetailData = () => {
   const { id } = useParams() as { id: string };
   const { data } = useQueryCharacterDetail(id);
-  fetch(data.imageUrl).catch(error => console.log('test', error));
 
   return (
     <CharacterDetailContainer>
