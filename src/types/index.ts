@@ -1,5 +1,5 @@
 export interface Character {
-  id: number;
+  id: string;
   films: Array<string>;
   name: string;
   imageUrl: string;
